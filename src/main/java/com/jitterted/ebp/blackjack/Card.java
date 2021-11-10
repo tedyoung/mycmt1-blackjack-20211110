@@ -5,16 +5,9 @@ import org.fusesource.jansi.Ansi;
 import static org.fusesource.jansi.Ansi.ansi;
 
 public class Card {
-    private final Suit suit; // Suit suit
+    private final Suit suit;
     private final String rank;
 
-    @Deprecated
-    public Card(String symbol, String rank) {
-        this.suit = Suit.from(symbol);
-        this.rank = rank;
-    }
-
-    // KEEP
     public Card(Suit suit, String rank) {
         this.suit = suit;
         this.rank = rank;
