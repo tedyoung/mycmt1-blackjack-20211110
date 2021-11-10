@@ -8,6 +8,7 @@ public enum Suit {
     HEARTS("♥"),
     CLUBS("♣");
 
+    @Deprecated
     static final List<String> SUITS = List.of(SPADES.symbol(),
                                               DIAMONDS.symbol(),
                                               HEARTS.symbol(),
