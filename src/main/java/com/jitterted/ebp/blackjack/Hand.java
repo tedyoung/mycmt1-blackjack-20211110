@@ -50,4 +50,21 @@ public class Hand {
     Card firstCard() {
         return cards.get(0);
     }
+
+    // More signal "smell" that we need a specialized Hand? for Dealer
+    boolean dealerShouldHit() {
+        return value() <= 16;
+    }
+
+    boolean isBusted() {
+        return value() > 21;
+    }
+
+    boolean beats(Hand hand) {
+        return hand.value() < value();
+    }
+
+    boolean pushes(Hand hand) {
+        return hand.value() == value();
+    }
 }
